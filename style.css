@@ -1,0 +1,156 @@
+.cButton{
+
+border:none;
+background-color: Transparent;
+  margin: 0;
+  width:98px;
+  height:142px;
+      position: absolute;
+      bottom: 60%;
+      left: 6%;
+      background-image: url('c.png');
+
+}
+.cButton:focus {outline:0;};
+.cButton:hover{
+
+-webkit-filter: brightness(140%);
+}
+
+.hButton{
+border:none;
+background-color: Transparent;
+  margin: 0;
+  width:150px;
+  height:181px;
+      position: absolute;
+      bottom: 57.5%;
+      left: 12%;
+      background-image: url('h.png');
+      -vendor-animation-duration: 3s;
+ animation-delay: .5s;
+ -vendor-animation-iteration-count: infinite;
+}
+.hButton:focus {outline:0;};
+.hButton:hover{
+
+-webkit-filter: brightness(140%);
+}
+
+.rButton{
+border:none;
+background-color: Transparent;
+  margin: 0;
+  width:96px;
+  height:149px;
+      position: absolute;
+      bottom: 59%;
+      left: 22%;
+      background-image: url('r.png');
+      -vendor-animation-duration: 3s;
+ animation-delay: 1s;
+ -vendor-animation-iteration-count: infinite;
+}
+.rButton:focus {outline:0;};
+.rButton:hover{
+
+-webkit-filter: brightness(140%);
+}
+
+.iButton{
+border:none;
+background-color: Transparent;
+  margin: 0;
+  width:36px;
+  height:142px;
+      position: absolute;
+      bottom: 60%;
+      left: 30%;
+      background-image: url('i.png');
+      -vendor-animation-duration: 3s;
+ animation-delay: 1.5s;
+ -vendor-animation-iteration-count: infinite;
+}
+.iButton:focus {outline:0;};
+.iButton:hover{
+
+-webkit-filter: brightness(140%);
+}
+
+.sButton{
+border:none;
+background-color: Transparent;
+  margin: 0;
+  width:101px;
+  height:145px;
+      position: absolute;
+      bottom: 59.5%;
+      left: 33%;
+      background-image: url('s.png');
+      -vendor-animation-duration: 3s;
+ animation-delay: 2s;
+ -vendor-animation-iteration-count: infinite;
+}
+.sButton:focus {outline:0;};
+.sButton:hover{
+
+-webkit-filter: brightness(140%);
+}
+
+
+body{
+   background-image: url("http://il2.picdn.net/shutterstock/videos/16615927/thumb/1.jpg");
+   no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+
+.vuButton{
+  width:300px;
+  height:179px;
+  background-image: url('vu.png');
+  margin: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 2%;
+
+
+}
+
+.marioButton{
+  width:300px;
+  height:179px;
+  background-image: url('mario.png');
+  margin: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 26%;
+      animation-delay: .5s;
+
+}
+
+.presButton{
+  width:300px;
+  height:179px;
+  background-image: url('pres.png');
+  margin: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 50%;
+      animation-delay: 1s;
+
+}
+.shruButton{
+  width:300px;
+  height:179px;
+  background-image: url('shru.png');
+  margin: 0;
+      position: absolute;
+      bottom: 2%;
+      left: 74%;
+      animation-delay: 1.5s;
+
+}
