@@ -11,6 +11,7 @@ var cButton=$('<button>');
    cButton.addClass('hvr-float-shadow');
  });
  cButton.click(function(e){
+
       var vuButton=$('<button>');
       vuButton.addClass('hvr-hang');
       vuButton.addClass('vuButton animated flipInX');
@@ -25,14 +26,19 @@ var cButton=$('<button>');
 
       var marioButton=$('<button>');
       marioButton.addClass('marioButton animated flipInX');
-
-      $('body').append(marioButton);
-      $('body').append(vuButton);
-     $('body').append(presButton);
-     $('body').append(shruButton);
+      $('div').empty();
+      $('div').append(marioButton);
+      $('div').append(vuButton);
+     $('div').append(presButton);
+     $('div').append(shruButton);
     })
 
     var hButton=$('<button>');
+    hButton.click(function(e){
+          $('div').empty();
+
+    })
+
       hButton.addClass('hvr-float-shadow');
      hButton.addClass('hButton animated fadeInUpBig');
      hButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -47,6 +53,10 @@ var cButton=$('<button>');
       rButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
         rButton.removeClass('animated fadeInUpBig');
       });
+      rButton.click(function(e){
+            $('div').empty();
+
+      })
 
       var iButton=$('<button>');
       iButton.addClass('hvr-float-shadow');
@@ -54,6 +64,10 @@ var cButton=$('<button>');
        iButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
          iButton.removeClass('animated fadeInUpBig');
        });
+       iButton.click(function(e){
+             $('div').empty();
+
+       })
 
        var sButton=$('<button>');
        sButton.addClass('hvr-float-shadow');
@@ -61,6 +75,10 @@ var cButton=$('<button>');
         sButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
           sButton.removeClass('animated fadeInUpBig');
         });
+        sButton.click(function(e){
+              $('div').empty();
+
+        })
 
 
 
