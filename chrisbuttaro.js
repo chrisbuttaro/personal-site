@@ -1,7 +1,4 @@
-
- //var buttonGroup=$('<div>');
- // buttonGroup.addClass('btn-group');
- // buttonGroup.attr('role', 'group');
+$(document).ready(function() {
 
 var cButton=$('<button>');
  cButton.addClass('cButton animated fadeInLeftBig');
@@ -13,17 +10,34 @@ var cButton=$('<button>');
  cButton.click(function(e){
 
       var vuButton=$('<button>');
-      vuButton.addClass('hvr-hang');
+      vuButton.addClass('hvr-grow');
       vuButton.addClass('vuButton animated flipInX');
       vuButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        vuButton.removeClass('animated flipInX');
+      vuButton.removeClass('animated flipInX');
+      vuButton.click(function() {
+      window.open("http://35.160.181.17:8080/Vu", "_blank");
+        });
       });
       var presButton=$('<button>');
+      presButton.addClass('hvr-grow');
       presButton.addClass('presButton animated flipInX');
-
+      presButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      presButton.removeClass('animated flipInX');
+      presButton.click(function() {
+      window.open("http://35.160.181.17:8080/PresidentsProject", "_blank");
+        });
+      });
       var marioButton=$('<button>');
+      marioButton.addClass('hvr-grow');
       marioButton.addClass('marioButton animated flipInX');
+      marioButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      marioButton.removeClass('animated flipInX');
+      marioButton.click(function() {
+      window.open("JSCalculator/JSCalculator.html", "_blank");
+        });
+      });
       $('div').empty();
+      $('div').append(create);
       $('div').append(marioButton);
       $('div').append(vuButton);
      $('div').append(presButton);
@@ -32,6 +46,7 @@ var cButton=$('<button>');
     var hButton=$('<button>');
     hButton.click(function(e){
           $('div').empty();
+          $('div').append(hist);
 
     })
 
@@ -55,6 +70,7 @@ var cButton=$('<button>');
       var dlButton=$('<button>');
       dlButton.addClass('class="btn btn-primary')
       dlButton.text('Download Resume');
+      form.attr("target", "_blank");
       dlButton.attr('type', 'submit');
       form.append(dlButton);
 
@@ -74,6 +90,7 @@ var cButton=$('<button>');
        });
        iButton.click(function(e){
              $('div').empty();
+             $('div').append(i);
 
        })
 
@@ -85,6 +102,7 @@ var cButton=$('<button>');
         });
         sButton.click(function(e){
               $('div').empty();
+              $('div').append(skills);
 
         })
 
@@ -100,7 +118,7 @@ $('body').append(sButton);
 
 var resume=$('<p>');
 resume.append(`
-<font face="Georgia" size="36"><p style="text-align: center;"><span style="font-weight: 400;"> &nbsp;Chris Buttaro</span></p></font>
+<font  size="30"><p style="text-align: center;"><strong> &nbsp;Chris Buttaro</strong></p></font>
 <p style="text-align: center;"><span style="font-weight: 400;">(340)227-7201|chris.buttaro@gmail.com|www.chrisbuttaro.com|<a href="https://github.com/chrisbuttaro">https://github.com/chrisbuttaro</a></span></p>
 <p style="text-align: center;"><strong>&nbsp;</strong></p>
 <p>&nbsp;</p>
@@ -242,4 +260,37 @@ resume.append(`
 </ul>
 <p>&nbsp;</p>
 <p>&nbsp;</p>`);
-resume.addClass('resume animated bounceInRight');
+resume.addClass('resume animated fadeIn');
+
+var create=$('<p>');
+create.addClass('create animated fadeIn');
+create.append(`<p><font size="30"><strong>Create</strong></font></p>
+<p style="text-align: center;">&nbsp;</p>
+<p><font size="3"><span style="font-weight: 400;">The process of creation is what attracted me to programming initially. &nbsp;For me, there&rsquo;s nothing more inspiring than being presented with a set of problems, brainstorming all the various solutions, testing my ideas, and building something functional that brings real value to people&rsquo;s lives. &nbsp;&nbsp;</span></font></p>`);
+
+var hist=$('<p>');
+hist.addClass('hist animated fadeIn')
+hist.append(`<p><font size="30"><strong>History</strong></font></p>
+<p><br /><span style="font-weight: 400;">Each of us has a unique set of experiences that we draw on when facing new problems. &nbsp;My challenges have often come under difficult conditions, where my failures could have had real consequences. &nbsp;As a military communications technician in South Korea, Haiti, Hurricane Katrina, Iraq, Afghanistan, and Qatar. &nbsp;I know what it's like to be depended on. &nbsp;As an applied mathematics student, I know what it&rsquo;s like to work day in, day out, for months at a time, in order to be successful. &nbsp;I always keep both my military and academic background in mind when I am faced with a new situation. &nbsp;Having gone through truly difficult circumstances, I can recognize situations that may seem formidable at first glance, but are actually completely manageable. &nbsp;&nbsp;Furthermore, when an issue is critical I know I can rely on myself to act and innovate accordingly as I have done so many times in the past. </span></p>`);
+
+var i=$('<p>');
+i.addClass('i animated fadeIn');
+i.append(`<p><font size="30"><strong>I</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">I love problem solving.</span></p>
+<p><span style="font-weight: 400;">I enjoy creative, stimulating atmospheres.</span></p>
+<p><span style="font-weight: 400;">I excel in a team environment. </span></p>
+<p><span style="font-weight: 400;">I cannot help but persist until a problem is solved. </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">I love to travel.</span></p>
+<p><span style="font-weight: 400;">I enjoy art.</span></p>
+<p><span style="font-weight: 400;">I go camping whenever possible.</span></p>
+<p><span style="font-weight: 400;">I lived in the Virgin Islands for three years.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">I am always exploring new territories in life. </span></p><br><br>`);
+
+var skills=$('<p>');
+skills.addClass('skills animated fadeIn');
+skills.append(`<p><font size="30"><strong>Skills</strong></font></p>
+<p><br /><span style="font-weight: 400;">Aside from the skills presented in my resume, there&rsquo;s more that I bring to the table. &nbsp;I am not only technically proficient but I&rsquo;m personable as well. &nbsp;I enjoy communicating with coworkers and clients to ensure that my work hits the mark. &nbsp;I look for my teammate&rsquo;s strengths to ensure we all bring our best to a project. &nbsp;</span></p>`);
+})

@@ -1,5 +1,5 @@
 body{
-   background-image: url("http://il2.picdn.net/shutterstock/videos/16615927/thumb/1.jpg");
+   background-image: url('back.png');
    no-repeat center center fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
@@ -7,12 +7,14 @@ body{
    background-size: cover;
    background-repeat: no-repeat;
     background-attachment: fixed;
+
 }
 
 form{
   position: absolute;
   bottom: 43%;
   left: 10%;
+  target-new:tab;
 }
 
 
@@ -119,9 +121,10 @@ background-color: Transparent;
   height:178px;
   background-image: url('vu.png');
   margin: 0;
-      position: absolute;
-      bottom: 65%;
-    right: 6%;
+  position: absolute;
+  bottom: 65%;
+  right: 10%;
+  target-new:tab;
 
 
 }
@@ -133,7 +136,7 @@ background-color: Transparent;
   margin: 0;
       position: absolute;
       bottom: 37%;
-      right: 6%;
+      right: 10%;
       animation-delay: .5s;
 
 }
@@ -145,11 +148,37 @@ background-color: Transparent;
   margin: 0;
       position: absolute;
       bottom: 9%;
-      right: 6%;
+      right: 10%;
       animation-delay: 1s;
 
 }
 .resume{
   margin-top: 250px;
   padding:120px;
+}
+
+.create{
+  margin-left:100px;
+  margin-right:500px;
+  margin-top:300px;
+}
+
+.hist{
+
+    margin-left:100px;
+    margin-right:500px;
+    margin-top:300px;
+
+}
+
+.i{
+  margin-left:100px;
+  margin-right:500px;
+  margin-top:300px;
+}
+
+.skills{
+  margin-left:100px;
+  margin-right:500px;
+  margin-top:300px;
 }
