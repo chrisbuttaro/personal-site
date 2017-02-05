@@ -1,184 +1,174 @@
-body{
-   background-image: url('back.png');
-   no-repeat center center fixed;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   background-repeat: no-repeat;
+body {
+    background-image: url('back.png');
+    no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-
+    min-width: 900px;
 }
-
-form{
-  position: absolute;
-  bottom: 43%;
-  left: 10%;
-  target-new:tab;
+form {
+    position: absolute;
+    bottom: 43%;
+    left: 10%;
+    target-new: tab;
 }
-
-
-.cButton{
-border:none;
-background-color: Transparent;
-  margin: 0;
-  width:98px;
-  height:142px;
-      position: absolute;
-      bottom: 70%;
-      left: 6%;
-      background-image: url('c.png');
-
+.cButton {
+    border: none;
+    background-color: Transparent;
+    margin: 0;
+    width: 98px;
+    height: 142px;
+    top: 50px;
+    left: 70px;
+    background-image: url('c.png');
+    position: absolute;
 }
-.cButton:focus {outline:0;};
-.cButton:hover{
-
--webkit-filter: brightness(140%);
+.cButton:focus {
+    outline: 0;
 }
-
-.hButton{
-border:none;
-background-color: Transparent;
-  margin: 0;
-  width:150px;
-  height:181px;
-      position: absolute;
-      bottom: 67.5%;
-      left: 12%;
-      background-image: url('h.png');
-      -vendor-animation-duration: 3s;
- animation-delay: .5s;
- -vendor-animation-iteration-count: infinite;
+;
+.cButton:hover {
+    -webkit-filter: brightness(140%);
 }
-.hButton:focus {outline:0;};
-.hButton:hover{
-
--webkit-filter: brightness(140%);
+.hButton {
+    border: none;
+    background-color: Transparent;
+    margin: 0;
+    width: 150px;
+    height: 181px;
+    top: 28px;
+    left: 148px;
+    background-image: url('h.png');
+    -vendor-animation-duration: 3s;
+    animation-delay: .5s;
+    -vendor-animation-iteration-count: infinite;
+    position: absolute;
 }
-
-.rButton{
-border:none;
-background-color: Transparent;
-  margin: 0;
-  width:96px;
-  height:149px;
-      position: absolute;
-      bottom: 69%;
-      left: 22%;
-      background-image: url('r.png');
-      -vendor-animation-duration: 3s;
- animation-delay: 1s;
- -vendor-animation-iteration-count: infinite;
+.hButton:focus {
+    outline: 0;
 }
-.rButton:focus {outline:0;};
-.rButton:hover{
-
--webkit-filter: brightness(140%);
+;
+.hButton:hover {
+    -webkit-filter: brightness(140%);
 }
-
-.iButton{
-border:none;
-background-color: Transparent;
-  margin: 0;
-  width:36px;
-  height:142px;
-      position: absolute;
-      bottom: 70%;
-      left: 30%;
-      background-image: url('i.png');
-      -vendor-animation-duration: 3s;
- animation-delay: 1.5s;
- -vendor-animation-iteration-count: infinite;
+.rButton {
+    border: none;
+    background-color: Transparent;
+    margin: 0;
+    width: 96px;
+    height: 149px;
+    top: 50px;
+    left: 279px;
+    background-image: url('r.png');
+    -vendor-animation-duration: 3s;
+    animation-delay: 1s;
+    -vendor-animation-iteration-count: infinite;
+    position: absolute;
 }
-.iButton:focus {outline:0;};
-.iButton:hover{
-
--webkit-filter: brightness(140%);
+.rButton:focus {
+    outline: 0;
 }
-
-.sButton{
-border:none;
-background-color: Transparent;
-  margin: 0;
-  width:101px;
-  height:145px;
-      position: absolute;
-      bottom: 69.5%;
-      left: 33%;
-      background-image: url('s.png');
-      -vendor-animation-duration: 3s;
- animation-delay: 2s;
- -vendor-animation-iteration-count: infinite;
+;
+.rButton:hover {
+    -webkit-filter: brightness(140%);
 }
-.sButton:focus {outline:0;};
-.sButton:hover{
-
--webkit-filter: brightness(140%);
+.iButton {
+    border: none;
+    background-color: Transparent;
+    margin: 0;
+    width: 36px;
+    height: 142px;
+    left:383px;
+    top: 50px;
+    background-image: url('i.png');
+    -vendor-animation-duration: 3s;
+    animation-delay: 1.5s;
+    -vendor-animation-iteration-count: infinite;
+    position: absolute;
 }
-
-.vuButton{
-  width:300px;
-  height:178px;
-  background-image: url('vu.png');
-  margin: 0;
-  position: absolute;
-  bottom: 65%;
-  right: 10%;
-  target-new:tab;
-
-
+.iButton:focus {
+    outline: 0;
 }
-
-.marioButton{
-  width:300px;
-  height:179px;
-  background-image: url('mario.png');
-  margin: 0;
-      position: absolute;
-      bottom: 37%;
-      right: 10%;
+;
+.iButton:hover {
+    -webkit-filter: brightness(140%);
+}
+.sButton {
+    border: none;
+    background-color: Transparent;
+    margin: 0;
+    width: 101px;
+    height: 145px;
+    top: 50px;
+    left: 425px;
+    background-image: url('s.png');
+    -vendor-animation-duration: 3s;
+    animation-delay: 2s;
+    -vendor-animation-iteration-count: infinite;
+    position: absolute;
+}
+.sButton:focus {
+    outline: 0;
+}
+;
+.sButton:hover {
+    -webkit-filter: brightness(140%);
+}
+.vuButton {
+    width: 300px;
+    height: 178px;
+    background-image: url('vu.png');
+    margin: 0;
+    position: absolute;
+    bottom: 37%;
+    right: 10%;
+    target-new: tab;
       animation-delay: .5s;
+}
+.marioButton {
+    width: 300px;
+    height: 179px;
+    background-image: url('mario.png');
+    margin: 0;
+    position: absolute;
+    bottom: 9%;
+    right: 10%;
+    animation-delay: 1s;
+}
+.codeButton {
+    width: 300px;
+    height: 179px;
+    background-image: url('codeqs.png');
+    margin: 0;
+    position: absolute;
+    bottom: 65%;
+    right: 10%;
 
 }
-
-.presButton{
-  width:300px;
-  height:179px;
-  background-image: url('pres.png');
-  margin: 0;
-      position: absolute;
-      bottom: 9%;
-      right: 10%;
-      animation-delay: 1s;
-
+.resume {
+    margin-top: 250px;
+    padding: 120px;
 }
-.resume{
-  margin-top: 250px;
-  padding:120px;
+.create {
+    margin-left: 100px;
+    margin-right: 500px;
+    margin-top: 300px;
 }
-
-.create{
-  margin-left:100px;
-  margin-right:500px;
-  margin-top:300px;
+.hist {
+    margin-left: 100px;
+    margin-right: 500px;
+    margin-top: 300px;
 }
-
-.hist{
-
-    margin-left:100px;
-    margin-right:500px;
-    margin-top:300px;
-
+.i {
+    margin-left: 100px;
+    margin-right: 500px;
+    margin-top: 300px;
 }
-
-.i{
-  margin-left:100px;
-  margin-right:500px;
-  margin-top:300px;
-}
-
-.skills{
-  margin-left:100px;
-  margin-right:500px;
-  margin-top:300px;
+.skills {
+    margin-left: 100px;
+    margin-right: 500px;
+    margin-top: 300px;
 }

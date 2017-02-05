@@ -18,13 +18,13 @@ var cButton=$('<button>');
       window.open("http://35.160.181.17:8080/Vu", "_blank");
         });
       });
-      var presButton=$('<button>');
-      presButton.addClass('hvr-grow');
-      presButton.addClass('presButton animated flipInX');
-      presButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      presButton.removeClass('animated flipInX');
-      presButton.click(function() {
-      window.open("http://35.160.181.17:8080/PresidentsProject", "_blank");
+      var codeButton=$('<button>');
+      codeButton.addClass('hvr-grow');
+      codeButton.addClass('codeButton animated flipInX');
+      codeButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      codeButton.removeClass('animated flipInX');
+      codeButton.click(function() {
+      window.open("http://35.160.181.17:8080/CodeQs", "_blank");
         });
       });
       var marioButton=$('<button>');
@@ -40,7 +40,7 @@ var cButton=$('<button>');
       $('div').append(create);
       $('div').append(marioButton);
       $('div').append(vuButton);
-     $('div').append(presButton);
+     $('div').append(codeButton);
     })
 
     var hButton=$('<button>');
