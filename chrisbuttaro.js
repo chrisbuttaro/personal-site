@@ -1,122 +1,106 @@
-$(document).ready(function() {
-
-var cButton=$('<button>');
- cButton.addClass('cButton animated fadeInLeftBig');
-
- cButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-   cButton.removeClass('animated fadeInUpBig');
-   cButton.addClass('hvr-float-shadow');
- });
- cButton.click(function(e){
-
-      var vuButton=$('<button>');
-      vuButton.addClass('hvr-grow');
-      vuButton.addClass('vuButton animated flipInX');
-      vuButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      vuButton.removeClass('animated flipInX');
-      vuButton.click(function() {
-      window.open("http://35.160.181.17:8080/Vu", "_blank");
-        });
-      });
-      var codeButton=$('<button>');
-      codeButton.addClass('hvr-grow');
-      codeButton.addClass('codeButton animated flipInX');
-      codeButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      codeButton.removeClass('animated flipInX');
-      codeButton.click(function() {
-      window.open("http://35.160.181.17:8080/CodeQs", "_blank");
-        });
-      });
-      var marioButton=$('<button>');
-      marioButton.addClass('hvr-grow');
-      marioButton.addClass('marioButton animated flipInX');
-      marioButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      marioButton.removeClass('animated flipInX');
-      marioButton.click(function() {
-      window.open("JSCalculator/JSCalculator.html", "_blank");
-        });
-      });
-      $('div').empty();
-      $('div').append(create);
-      $('div').append(marioButton);
-      $('div').append(vuButton);
-     $('div').append(codeButton);
+$(document).ready(function () {
+    var cButton = $('<button>');
+    cButton.click(function (e) {
+        var cContent = $('<p>');
+        cContent.addClass('create animated fadeIn');
+        cContent.append(`<p><font size="30"><strong>Collaborative</strong></font></p>
+                    <p style="text-align: center;">&nbsp;</p>
+                    <p><font size="3"><span style="font-weight: 400;">The process of creation is what attracted me to programming initially. &nbsp;For me, there&rsquo;s nothing more inspiring than being presented with a set of problems, brainstorming all the various solutions, testing my ideas, and building something functional that brings real value to people&rsquo;s lives. &nbsp;&nbsp;</span></font></p>`);
+        $('div').empty();
+        $('div').append(cContent);
     })
+    cButton.addClass('cButton animated fadeInLeftBig');
+    cButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        cButton.removeClass('animated fadeInUpBig');
+        cButton.addClass('hvr-float-shadow');
+    });
 
-    var hButton=$('<button>');
-    hButton.click(function(e){
-          $('div').empty();
-          $('div').append(hist);
+    var hButton = $('<button>');
+    hButton.click(function (e) {
+        var hContent = $('<p>');
+        hContent.addClass('hist animated fadeIn')
+        hContent.append(`<p><font size="30"><strong>Hard-working</strong></font></p>
+        <p><br /><span style="font-weight: 400;">Each of us has a unique set of experiences that we draw on when facing new problems. &nbsp;My challenges have often come under difficult conditions, where my failures could have had real consequences. &nbsp;As a military communications technician in South Korea, Haiti, Hurricane Katrina, Iraq, Afghanistan, and Qatar. &nbsp;I know what it's like to be depended on. &nbsp;As an applied mathematics student, I know what it&rsquo;s like to work day in, day out, for months at a time, in order to be successful. &nbsp;I always keep both my military and academic background in mind when I am faced with a new situation. &nbsp;Having gone through truly difficult circumstances, I can recognize situations that may seem formidable at first glance, but are actually completely manageable. &nbsp;&nbsp;Furthermore, when an issue is critical I know I can rely on myself to act and innovate accordingly as I have done so many times in the past. </span></p>`);
+        $('div').empty();
+        $('div').append(hContent);
 
     })
-
-      hButton.addClass('hvr-float-shadow');
-     hButton.addClass('hButton animated fadeInUpBig');
-     hButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-       hButton.removeClass('animated fadeInUpBig');
-     });
-
+    hButton.addClass('hvr-float-shadow');
+    hButton.addClass('hButton animated fadeInUpBig');
+    hButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        hButton.removeClass('animated fadeInUpBig');
+    });
 
 
-     var rButton=$('<button>');
-     rButton.addClass('hvr-float-shadow');
-      rButton.addClass('rButton animated fadeInDownBig ');
-      rButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    var rButton = $('<button>');
+    form.addClass('animated bounceInLeft');
+    rButton.click(function (e) {
+        var rContent = $('<p>');
+        rContent.addClass('create animated fadeIn');
+        rContent.append(`<p><font size="30"><strong>Reliable</strong></font></p>
+                    <p style="text-align: center;">&nbsp;</p>
+                    <p><font size="3"><span style="font-weight: 400;">The process of creation is what attracted me to programming initially. &nbsp;For me, there&rsquo;s nothing more inspiring than being presented with a set of problems, brainstorming all the various solutions, testing my ideas, and building something functional that brings real value to people&rsquo;s lives. &nbsp;&nbsp;</span></font></p>`);
+
+        $('div').empty();
+        $('div').append(rContent);
+        $('div').append(resume);
+        $('div').append(form);
+
+    })
+    rButton.addClass('hvr-float-shadow');
+    rButton.addClass('rButton animated fadeInDownBig ');
+    rButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
         rButton.removeClass('animated fadeInUpBig');
-      });
-      var form=$('<form>');
-      form.attr('method', 'GET');
-      form.attr('action', 'ChrisButtaro.pdf');
-      var dlButton=$('<button>');
-      dlButton.addClass('class="btn btn-primary')
-      dlButton.text('Download Resume');
-      form.attr("target", "_blank");
-      dlButton.attr('type', 'submit');
-      form.append(dlButton);
+    });
 
-      form.addClass('animated bounceInLeft');
-      rButton.click(function(e){
-            $('div').empty();
-            $('div').append(resume);
-            $('div').append(form);
+    var iButton = $('<button>');
+    iButton.click(function () {
+        const iContent = $('<p>');
+        iContent.addClass('i animated fadeIn');
+        iContent.append(`<p><font size="30"><strong>Independant</font></p>`)
+        $('div').empty();
+        $('div').append(iContent);
 
-      })
+    })
+    iButton.addClass('hvr-float-shadow');
+    iButton.addClass('iButton animated fadeInUpBig');
+    iButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        iButton.removeClass('animated fadeInUpBig');
+    });
 
-      var iButton=$('<button>');
-      iButton.addClass('hvr-float-shadow');
-       iButton.addClass('iButton animated fadeInUpBig');
-       iButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-         iButton.removeClass('animated fadeInUpBig');
-       });
-       iButton.click(function(e){
-             $('div').empty();
-             $('div').append(i);
+    var sButton = $('<button>');
+    sButton.addClass('hvr-float-shadow');
+    sButton.addClass('sButton animated fadeInRightBig');
+    sButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        sButton.removeClass('animated fadeInUpBig');
+    });
+    sButton.click(function (e) {
+        var sContent = $('<p>');
+        sContent.addClass('skills animated fadeIn');
+        sContent.append(`<p><font size="30"><strong>Software Engineer</strong></font></p>
+        <p><br /><span style="font-weight: 400;">Aside from the skills presented in my resume, there&rsquo;s more that I bring to the table. &nbsp;I am not only technically proficient but I&rsquo;m personable as well. &nbsp;I enjoy communicating with coworkers and clients to ensure that my work hits the mark. &nbsp;I look for my teammate&rsquo;s strengths to ensure we all bring our best to a project. &nbsp;</span></p>`);
+        $('div').empty();
+        $('div').append(sContent);
+    })
 
-       })
+    $('body').append(cButton);
+    $('body').append(hButton);
+    $('body').append(rButton);
+    $('body').append(iButton);
+    $('body').append(sButton);
+})
 
-       var sButton=$('<button>');
-       sButton.addClass('hvr-float-shadow');
-        sButton.addClass('sButton animated fadeInRightBig');
-        sButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-          sButton.removeClass('animated fadeInUpBig');
-        });
-        sButton.click(function(e){
-              $('div').empty();
-              $('div').append(skills);
+var form = $('<form>');
+form.attr('method', 'GET');
+form.attr('action', 'ChrisButtaro.pdf');
+var dlButton = $('<button>');
+dlButton.addClass('class="btn btn-primary')
+dlButton.text('Download Resume');
+form.attr("target", "_blank");
+dlButton.attr('type', 'submit');
+form.append(dlButton);
 
-        })
-
-
-
-
-$('body').append(cButton);
-$('body').append(hButton);
-$('body').append(rButton);
-$('body').append(iButton);
-$('body').append(sButton);
-
-
-var resume=$('<p>');
+var resume = $('<p>');
 resume.append(`
 <font  size="30"><p style="text-align: center;"><strong> &nbsp;Chris Buttaro</strong></p></font>
 <p style="text-align: center;"><span style="font-weight: 400;">(340)227-7201|chris.buttaro@gmail.com|www.chrisbuttaro.com|<a href="https://github.com/chrisbuttaro">https://github.com/chrisbuttaro</a></span></p>
@@ -261,36 +245,3 @@ resume.append(`
 <p>&nbsp;</p>
 <p>&nbsp;</p>`);
 resume.addClass('resume animated fadeIn');
-
-var create=$('<p>');
-create.addClass('create animated fadeIn');
-create.append(`<p><font size="30"><strong>Create</strong></font></p>
-<p style="text-align: center;">&nbsp;</p>
-<p><font size="3"><span style="font-weight: 400;">The process of creation is what attracted me to programming initially. &nbsp;For me, there&rsquo;s nothing more inspiring than being presented with a set of problems, brainstorming all the various solutions, testing my ideas, and building something functional that brings real value to people&rsquo;s lives. &nbsp;&nbsp;</span></font></p>`);
-
-var hist=$('<p>');
-hist.addClass('hist animated fadeIn')
-hist.append(`<p><font size="30"><strong>History</strong></font></p>
-<p><br /><span style="font-weight: 400;">Each of us has a unique set of experiences that we draw on when facing new problems. &nbsp;My challenges have often come under difficult conditions, where my failures could have had real consequences. &nbsp;As a military communications technician in South Korea, Haiti, Hurricane Katrina, Iraq, Afghanistan, and Qatar. &nbsp;I know what it's like to be depended on. &nbsp;As an applied mathematics student, I know what it&rsquo;s like to work day in, day out, for months at a time, in order to be successful. &nbsp;I always keep both my military and academic background in mind when I am faced with a new situation. &nbsp;Having gone through truly difficult circumstances, I can recognize situations that may seem formidable at first glance, but are actually completely manageable. &nbsp;&nbsp;Furthermore, when an issue is critical I know I can rely on myself to act and innovate accordingly as I have done so many times in the past. </span></p>`);
-
-var i=$('<p>');
-i.addClass('i animated fadeIn');
-i.append(`<p><font size="30"><strong>I</font></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">I love problem solving.</span></p>
-<p><span style="font-weight: 400;">I enjoy creative, stimulating atmospheres.</span></p>
-<p><span style="font-weight: 400;">I excel in a team environment. </span></p>
-<p><span style="font-weight: 400;">I cannot help but persist until a problem is solved. </span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">I love to travel.</span></p>
-<p><span style="font-weight: 400;">I enjoy art.</span></p>
-<p><span style="font-weight: 400;">I go camping whenever possible.</span></p>
-<p><span style="font-weight: 400;">I lived in the Virgin Islands for three years.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">I am always exploring new territories in life. </span></p><br><br>`);
-
-var skills=$('<p>');
-skills.addClass('skills animated fadeIn');
-skills.append(`<p><font size="30"><strong>Skills</strong></font></p>
-<p><br /><span style="font-weight: 400;">Aside from the skills presented in my resume, there&rsquo;s more that I bring to the table. &nbsp;I am not only technically proficient but I&rsquo;m personable as well. &nbsp;I enjoy communicating with coworkers and clients to ensure that my work hits the mark. &nbsp;I look for my teammate&rsquo;s strengths to ensure we all bring our best to a project. &nbsp;</span></p>`);
-})
