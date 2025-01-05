@@ -1,6 +1,6 @@
 body {
-    background-image: url('back.png');
-    no-repeat center center fixed;
+    background-image: url('back.jpeg');
+    no-repeat: center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -29,7 +29,6 @@ form {
 .cButton:focus {
     outline: 0;
 }
-;
 .cButton:hover {
     -webkit-filter: brightness(140%);
 }
@@ -51,7 +50,6 @@ form {
 .hButton:focus {
     outline: 0;
 }
-;
 .hButton:hover {
     -webkit-filter: brightness(140%);
 }
@@ -73,7 +71,6 @@ form {
 .rButton:focus {
     outline: 0;
 }
-;
 .rButton:hover {
     -webkit-filter: brightness(140%);
 }
@@ -94,7 +91,6 @@ form {
 .iButton:focus {
     outline: 0;
 }
-;
 .iButton:hover {
     -webkit-filter: brightness(140%);
 }
@@ -115,7 +111,6 @@ form {
 .sButton:focus {
     outline: 0;
 }
-;
 .sButton:hover {
     -webkit-filter: brightness(140%);
 }
