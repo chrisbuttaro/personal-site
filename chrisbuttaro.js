@@ -1,5 +1,23 @@
 $(document).ready(function () {
-    const cButton = $('<button>');
+    function addButton(text, fadeDirection, heading, buttonClass) {
+        const button = $('<button>');
+        button.click(function () {
+            const content = $('<p>');
+            content.addClass('textMargin animated fadeIn');
+            content.append(`<p><font size="30"><strong>${heading}</font></p>
+                    <p style="text-align: center;">&nbsp;</p>
+                    <p><font size="3"><span style="font-weight: 400;">${text}</span></font></p>`);
+            $('div').empty();
+            $('div').append(content);
+
+        })
+        button.addClass('hvr-float-shadow');
+        button.addClass(`${buttonClass} animated ${fadeDirection}`);
+        button.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            button.removeClass(`animated ${fadeDirection}`);
+        });
+        $('body').append(button);
+    }
     const cText = "I am a collaborative developer who enjoys working with teammates to deliver " +
         "comprehensive solutions. I enjoy sharing my technical insight with product managers and business" +
         " analysts to plan, prioritize, and refine user stories that align with business goals. I work " +
@@ -7,115 +25,35 @@ $(document).ready(function () {
         "to mentoring junior developers to grow their skills, confidence, and contributions. " +
         "In developing software it truly takes a team and being a great team member is among " +
         "my highest priorities."
-    cButton.click(function (e) {
-        var cContent = $('<p>');
-        cContent.addClass('textMargin animated fadeIn');
-        cContent.append(`<p><font size="30"><strong>Collaborative</strong></font></p>
-                    <p style="text-align: center;">&nbsp;</p>
-                    <p><font size="3"><span style="font-weight: 400;">${cText}</span></font></p>`);
-        $('div').empty();
-        $('div').append(cContent);
-    })
-    cButton.addClass('cButton animated fadeInLeftBig');
-    cButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-        cButton.removeClass('animated fadeInUpBig');
-        cButton.addClass('hvr-float-shadow');
-    });
 
-    const hButton = $('<button>');
     const hText = "I bring a strong work ethic and unwavering commitment to delivering high-quality results " +
         "to every project I undertake. I see initiatives through from inception to successful completion, " +
         "focusing on meticulous execution. My proactive approach to planning and problem-solving ensures " +
         "that deadlines are met without compromising quality."
-    hButton.click(function (e) {
-        var hContent = $('<p>');
-        hContent.addClass('textMargin animated fadeIn')
-        hContent.append(`<p><font size="30"><strong>Hard-working</strong></font></p>
-                    <p style="text-align: center;">&nbsp;</p>
-                    <p><font size="3"><span style="font-weight: 400;">${hText}</span></font></p>`);
-        $('div').empty();
-        $('div').append(hContent);
 
-    })
-    hButton.addClass('hvr-float-shadow');
-    hButton.addClass('hButton animated fadeInUpBig');
-    hButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-        hButton.removeClass('animated fadeInUpBig');
-    });
-
-
-    const rButton = $('<button>');
     const rText = "I believe consistency is as important as skill. Iteration after iteration, " +
         "colleagues and collaborators can count on me to follow through on commitments, complete my " +
         "features on time, and uphold high standards of quality. I prioritize clear communication, " +
         "proactive problem-solving, and thoughtful planning to ensure smooth and predictable project " +
         "outcomes. It’s important to me that my consistent performance fosters trust and contributes " +
         "to a strong, dependable team dynamic."
-    form.addClass('animated bounceInLeft');
-    rButton.click(function (e) {
-        var rContent = $('<p>');
-        rContent.addClass('textMargin animated fadeIn');
-        rContent.append(`<p><font size="30"><strong>Reliable</strong></font></p>
-                    <p style="text-align: center;">&nbsp;</p>
-                    <p><font size="3"><span style="font-weight: 400;">${rText}</span></font></p>`);
 
-        $('div').empty();
-        $('div').append(rContent);
-        $('div').append(resume);
-        $('div').append(form);
-
-    })
-    rButton.addClass('hvr-float-shadow');
-    rButton.addClass('rButton animated fadeInDownBig ');
-    rButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-        rButton.removeClass('animated fadeInUpBig');
-    });
-
-    function addButton(text, ) {
-    }
-
-    const iButton = $('<button>');
     const iText = "Software development relies on teamwork, but there's great value in being " +
         "persistent and solving problems independently. I consider myself a self-sufficient engineer who " +
         "enjoys troubleshooting. While I value collaboration and know when to seek help, I strive to minimize" +
         " my reliance on others. Balancing autonomy with teamwork helps makes me an effective engineer."
-    iButton.click(function () {
-        const iContent = $('<p>');
-        iContent.addClass('textMargin animated fadeIn');
-        iContent.append(`<p><font size="30"><strong>Independent</font></p>
-                    <p style="text-align: center;">&nbsp;</p>
-                    <p><font size="3"><span style="font-weight: 400;">${iText}</span></font></p>`);
-        $('div').empty();
-        $('div').append(iContent);
 
-    })
-    iButton.addClass('hvr-float-shadow');
-    iButton.addClass('iButton animated fadeInUpBig');
-    iButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-        iButton.removeClass('animated fadeInUpBig');
-    });
+    const sText = "I believe it is as important to be consistent as it is to be skilled. " +
+        "Iteration after iteration colleagues and collaborators can count on me to follow through " +
+        "on commitments, complete my features on time, and uphold high standards of quality. I prioritize " +
+        "clear communication, proactive problem-solving, and thoughtful planning to ensure smooth and " +
+        "predictable project outcomes. It’s important to me that my consistent performance fosters trust and contributes to a strong, dependable team dynamic."
 
-    var sButton = $('<button>');
-    sButton.addClass('hvr-float-shadow');
-    sButton.addClass('sButton animated fadeInRightBig');
-    sButton.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-        sButton.removeClass('animated fadeInUpBig');
-    });
-    sButton.click(function (e) {
-        var sContent = $('<p>');
-        sContent.addClass('textMargin animated fadeIn');
-        sContent.append(`<p><font size="30"><strong>Software Developer</strong></font></p>
-                    <p style="text-align: center;">&nbsp;</p>
-                    <p><font size="3"><span style="font-weight: 400;">I believe it is as important to be consistent as it is to be skilled. Iteration after iteration colleagues and collaborators can count on me to follow through on commitments, complete my features on time, and uphold high standards of quality. I prioritize clear communication, proactive problem-solving, and thoughtful planning to ensure smooth and predictable project outcomes. It’s important to me that my consistent performance fosters trust and contributes to a strong, dependable team dynamic.</span></font></p>`);
-        $('div').empty();
-        $('div').append(sContent);
-    })
-
-    $('body').append(cButton);
-    $('body').append(hButton);
-    $('body').append(rButton);
-    $('body').append(iButton);
-    $('body').append(sButton);
+    addButton(cText, "fadeInUpBig", "Collaborative", "cButton")
+    addButton(hText, "fadeInUpBig", "Hard-working", "hButton")
+    addButton(rText, "fadeInUpBig", "Reliable", "rButton")
+    addButton(iText, "fadeInUpBig", "Independent", "iButton")
+    addButton(sText, "fadeInUpBig", "Software Developer", "sButton")
 })
 
 var form = $('<form>');
