@@ -9,7 +9,7 @@ $(document).ready(function () {
         "my highest priorities."
     cButton.click(function (e) {
         var cContent = $('<p>');
-        cContent.addClass('create animated fadeIn');
+        cContent.addClass('textMargin animated fadeIn');
         cContent.append(`<p><font size="30"><strong>Collaborative</strong></font></p>
                     <p style="text-align: center;">&nbsp;</p>
                     <p><font size="3"><span style="font-weight: 400;">${cText}</span></font></p>`);
@@ -29,7 +29,7 @@ $(document).ready(function () {
         "that deadlines are met without compromising quality."
     hButton.click(function (e) {
         var hContent = $('<p>');
-        hContent.addClass('hist animated fadeIn')
+        hContent.addClass('textMargin animated fadeIn')
         hContent.append(`<p><font size="30"><strong>Hard-working</strong></font></p>
                     <p style="text-align: center;">&nbsp;</p>
                     <p><font size="3"><span style="font-weight: 400;">${hText}</span></font></p>`);
@@ -54,7 +54,7 @@ $(document).ready(function () {
     form.addClass('animated bounceInLeft');
     rButton.click(function (e) {
         var rContent = $('<p>');
-        rContent.addClass('create animated fadeIn');
+        rContent.addClass('textMargin animated fadeIn');
         rContent.append(`<p><font size="30"><strong>Reliable</strong></font></p>
                     <p style="text-align: center;">&nbsp;</p>
                     <p><font size="3"><span style="font-weight: 400;">${rText}</span></font></p>`);
@@ -71,6 +71,9 @@ $(document).ready(function () {
         rButton.removeClass('animated fadeInUpBig');
     });
 
+    function addButton(text, ) {
+    }
+
     const iButton = $('<button>');
     const iText = "Software development relies on teamwork, but there's great value in being " +
         "persistent and solving problems independently. I consider myself a self-sufficient engineer who " +
@@ -78,7 +81,7 @@ $(document).ready(function () {
         " my reliance on others. Balancing autonomy with teamwork helps makes me an effective engineer."
     iButton.click(function () {
         const iContent = $('<p>');
-        iContent.addClass('i animated fadeIn');
+        iContent.addClass('textMargin animated fadeIn');
         iContent.append(`<p><font size="30"><strong>Independent</font></p>
                     <p style="text-align: center;">&nbsp;</p>
                     <p><font size="3"><span style="font-weight: 400;">${iText}</span></font></p>`);
@@ -100,8 +103,8 @@ $(document).ready(function () {
     });
     sButton.click(function (e) {
         var sContent = $('<p>');
-        sContent.addClass('skills animated fadeIn');
-        sContent.append(`<p><font size="30"><strong>Hard-working</strong></font></p>
+        sContent.addClass('textMargin animated fadeIn');
+        sContent.append(`<p><font size="30"><strong>Software Developer</strong></font></p>
                     <p style="text-align: center;">&nbsp;</p>
                     <p><font size="3"><span style="font-weight: 400;">I believe it is as important to be consistent as it is to be skilled. Iteration after iteration colleagues and collaborators can count on me to follow through on commitments, complete my features on time, and uphold high standards of quality. I prioritize clear communication, proactive problem-solving, and thoughtful planning to ensure smooth and predictable project outcomes. It’s important to me that my consistent performance fosters trust and contributes to a strong, dependable team dynamic.</span></font></p>`);
         $('div').empty();

@@ -114,57 +114,12 @@ form {
 .sButton:hover {
     -webkit-filter: brightness(140%);
 }
-.vuButton {
-    width: 300px;
-    height: 178px;
-    background-image: url('vu.png');
-    margin: 0;
-    position: absolute;
-    bottom: 37%;
-    right: 10%;
-    target-new: tab;
-      animation-delay: .5s;
-}
-.marioButton {
-    width: 300px;
-    height: 179px;
-    background-image: url('mario.png');
-    margin: 0;
-    position: absolute;
-    bottom: 9%;
-    right: 10%;
-    animation-delay: 1s;
-}
-.codeButton {
-    width: 300px;
-    height: 179px;
-    background-image: url('codeqs.png');
-    margin: 0;
-    position: absolute;
-    bottom: 65%;
-    right: 10%;
 
-}
 .resume {
     margin-top: 250px;
     padding: 120px;
 }
-.create {
-    margin-left: 100px;
-    margin-right: 500px;
-    margin-top: 300px;
-}
-.hist {
-    margin-left: 100px;
-    margin-right: 500px;
-    margin-top: 300px;
-}
-.i {
-    margin-left: 100px;
-    margin-right: 500px;
-    margin-top: 300px;
-}
-.skills {
+.textMargin {
     margin-left: 100px;
     margin-right: 500px;
     margin-top: 300px;
