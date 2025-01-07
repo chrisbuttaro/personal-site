@@ -5,7 +5,7 @@ $(document).ready(function () {
         cContent.addClass('create animated fadeIn');
         cContent.append(`<p><font size="30"><strong>Collaborative</strong></font></p>
                     <p style="text-align: center;">&nbsp;</p>
-                    <p><font size="3"><span style="font-weight: 400;">The process of creation is what attracted me to programming initially. &nbsp;For me, there&rsquo;s nothing more inspiring than being presented with a set of problems, brainstorming all the various solutions, testing my ideas, and building something functional that brings real value to people&rsquo;s lives. &nbsp;&nbsp;</span></font></p>`);
+                    <p><font size="3"><span style="font-weight: 400;">I am a collaborative engineer who enjoys working with teammates to deliver comprehensive solutions. I enjoy sharing my technical insight with product managers and business analysts to plan, prioritize, and refine user stories that align with business goals. I work closely with fellow engineers to design, test, and coordinate complex deployments. I’m committed to mentoring junior teammates to grow their skills, confidence, and contribution. In developing software it truly takes a team and being a great team member is among my highest priorities.  &nbsp;&nbsp;</span></font></p>`);
         $('div').empty();
         $('div').append(cContent);
     })
