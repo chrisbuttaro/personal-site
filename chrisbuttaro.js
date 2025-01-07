@@ -1,11 +1,18 @@
 $(document).ready(function () {
-    var cButton = $('<button>');
+    const cButton = $('<button>');
+    const cText = "I am a collaborative developer who enjoys working with teammates to deliver " +
+        "comprehensive solutions. I enjoy sharing my technical insight with product managers and business" +
+        " analysts to plan, prioritize, and refine user stories that align with business goals. I work " +
+        "closely with fellow team members to design, test, and coordinate complex deployments. I’m committed " +
+        "to mentoring junior developers to grow their skills, confidence, and contributions. " +
+        "In developing software it truly takes a team and being a great team member is among " +
+        "my highest priorities."
     cButton.click(function (e) {
         var cContent = $('<p>');
         cContent.addClass('create animated fadeIn');
         cContent.append(`<p><font size="30"><strong>Collaborative</strong></font></p>
                     <p style="text-align: center;">&nbsp;</p>
-                    <p><font size="3"><span style="font-weight: 400;">I am a collaborative engineer who enjoys working with teammates to deliver comprehensive solutions. I enjoy sharing my technical insight with product managers and business analysts to plan, prioritize, and refine user stories that align with business goals. I work closely with fellow engineers to design, test, and coordinate complex deployments. I’m committed to mentoring junior teammates to grow their skills, confidence, and contribution. In developing software it truly takes a team and being a great team member is among my highest priorities.  &nbsp;&nbsp;</span></font></p>`);
+                    <p><font size="3"><span style="font-weight: 400;">${cText}</span></font></p>`);
         $('div').empty();
         $('div').append(cContent);
     })
@@ -15,12 +22,17 @@ $(document).ready(function () {
         cButton.addClass('hvr-float-shadow');
     });
 
-    var hButton = $('<button>');
+    const hButton = $('<button>');
+    const hText = "I bring a strong work ethic and unwavering commitment to delivering high-quality results " +
+        "to every project I undertake. I see initiatives through from inception to successful completion, " +
+        "focusing on meticulous execution. My proactive approach to planning and problem-solving ensures " +
+        "that deadlines are met without compromising quality."
     hButton.click(function (e) {
         var hContent = $('<p>');
         hContent.addClass('hist animated fadeIn')
         hContent.append(`<p><font size="30"><strong>Hard-working</strong></font></p>
-        <p><br /><span style="font-weight: 400;">Each of us has a unique set of experiences that we draw on when facing new problems. &nbsp;My challenges have often come under difficult conditions, where my failures could have had real consequences. &nbsp;As a military communications technician in South Korea, Haiti, Hurricane Katrina, Iraq, Afghanistan, and Qatar. &nbsp;I know what it's like to be depended on. &nbsp;As an applied mathematics student, I know what it&rsquo;s like to work day in, day out, for months at a time, in order to be successful. &nbsp;I always keep both my military and academic background in mind when I am faced with a new situation. &nbsp;Having gone through truly difficult circumstances, I can recognize situations that may seem formidable at first glance, but are actually completely manageable. &nbsp;&nbsp;Furthermore, when an issue is critical I know I can rely on myself to act and innovate accordingly as I have done so many times in the past. </span></p>`);
+                    <p style="text-align: center;">&nbsp;</p>
+                    <p><font size="3"><span style="font-weight: 400;">${hText}</span></font></p>`);
         $('div').empty();
         $('div').append(hContent);
 
@@ -32,14 +44,20 @@ $(document).ready(function () {
     });
 
 
-    var rButton = $('<button>');
+    const rButton = $('<button>');
+    const rText = "I believe consistency is as important as skill. Iteration after iteration, " +
+        "colleagues and collaborators can count on me to follow through on commitments, complete my " +
+        "features on time, and uphold high standards of quality. I prioritize clear communication, " +
+        "proactive problem-solving, and thoughtful planning to ensure smooth and predictable project " +
+        "outcomes. It’s important to me that my consistent performance fosters trust and contributes " +
+        "to a strong, dependable team dynamic."
     form.addClass('animated bounceInLeft');
     rButton.click(function (e) {
         var rContent = $('<p>');
         rContent.addClass('create animated fadeIn');
         rContent.append(`<p><font size="30"><strong>Reliable</strong></font></p>
                     <p style="text-align: center;">&nbsp;</p>
-                    <p><font size="3"><span style="font-weight: 400;">The process of creation is what attracted me to programming initially. &nbsp;For me, there&rsquo;s nothing more inspiring than being presented with a set of problems, brainstorming all the various solutions, testing my ideas, and building something functional that brings real value to people&rsquo;s lives. &nbsp;&nbsp;</span></font></p>`);
+                    <p><font size="3"><span style="font-weight: 400;">${rText}</span></font></p>`);
 
         $('div').empty();
         $('div').append(rContent);
@@ -53,11 +71,17 @@ $(document).ready(function () {
         rButton.removeClass('animated fadeInUpBig');
     });
 
-    var iButton = $('<button>');
+    const iButton = $('<button>');
+    const iText = "Software development relies on teamwork, but there's great value in being " +
+        "persistent and solving problems independently. I consider myself a self-sufficient engineer who " +
+        "enjoys troubleshooting. While I value collaboration and know when to seek help, I strive to minimize" +
+        " my reliance on others. Balancing autonomy with teamwork helps makes me an effective engineer."
     iButton.click(function () {
         const iContent = $('<p>');
         iContent.addClass('i animated fadeIn');
-        iContent.append(`<p><font size="30"><strong>Independant</font></p>`)
+        iContent.append(`<p><font size="30"><strong>Independent</font></p>
+                    <p style="text-align: center;">&nbsp;</p>
+                    <p><font size="3"><span style="font-weight: 400;">${iText}</span></font></p>`);
         $('div').empty();
         $('div').append(iContent);
 
@@ -77,8 +101,9 @@ $(document).ready(function () {
     sButton.click(function (e) {
         var sContent = $('<p>');
         sContent.addClass('skills animated fadeIn');
-        sContent.append(`<p><font size="30"><strong>Software Engineer</strong></font></p>
-        <p><br /><span style="font-weight: 400;">Aside from the skills presented in my resume, there&rsquo;s more that I bring to the table. &nbsp;I am not only technically proficient but I&rsquo;m personable as well. &nbsp;I enjoy communicating with coworkers and clients to ensure that my work hits the mark. &nbsp;I look for my teammate&rsquo;s strengths to ensure we all bring our best to a project. &nbsp;</span></p>`);
+        sContent.append(`<p><font size="30"><strong>Hard-working</strong></font></p>
+                    <p style="text-align: center;">&nbsp;</p>
+                    <p><font size="3"><span style="font-weight: 400;">I believe it is as important to be consistent as it is to be skilled. Iteration after iteration colleagues and collaborators can count on me to follow through on commitments, complete my features on time, and uphold high standards of quality. I prioritize clear communication, proactive problem-solving, and thoughtful planning to ensure smooth and predictable project outcomes. It’s important to me that my consistent performance fosters trust and contributes to a strong, dependable team dynamic.</span></font></p>`);
         $('div').empty();
         $('div').append(sContent);
     })
