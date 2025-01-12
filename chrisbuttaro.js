@@ -49,11 +49,42 @@ $(document).ready(function () {
         "clear communication, proactive problem-solving, and thoughtful planning to ensure smooth and " +
         "predictable project outcomes. It’s important to me that my consistent performance fosters trust and contributes to a strong, dependable team dynamic."
 
-    addButton(cText, "fadeInUpBig", "Collaborative", "cButton")
-    addButton(hText, "fadeInUpBig", "Hard-working", "hButton")
-    addButton(rText, "fadeInUpBig", "Reliable", "rButton")
-    addButton(iText, "fadeInUpBig", "Independent", "iButton")
-    addButton(sText, "fadeInUpBig", "Software Developer", "sButton")
+    addButton(cText, "fadeIn", "Collaborative", "cButton")
+    addButton(hText, "fadeIn", "Hard-working", "hButton")
+    addButton(rText, "fadeIn", "Reliable", "rButton")
+    addButton(iText, "fadeIn", "Independent", "iButton")
+    addButton(sText, "fadeIn", "Software Developer", "sButton")
+
+    const sidebar = $('<div>');
+    sidebar.addClass('sidebar collapsed animated fadeIn');
+
+    const toggleButton = $('<button>')
+        .addClass('toggle-btn hvr-grow animated fadeIn')
+        .text('<')
+        .click(() => {
+            if(sidebar.hasClass('collapsed')) {
+                sidebar.removeClass('collapsed');
+                toggleButton.text('>');
+            } else {
+                sidebar.addClass('collapsed');
+                toggleButton.text('<');
+            }
+        });
+
+    const aboutMeContent = $('<div>');
+    aboutMeContent.addClass('about-me-content animated fadeIn');
+    aboutMeContent.html(`
+        <h2></h2>
+        <img src="your-photo.jpg" alt="Chris Buttaro" class="profile-img">
+        <p>Full Stack Developer with expertise in Java, Spring, and JavaScript.</p>
+        <div class="social-links">
+            <a href="https://github.com/chrisbuttaro" class="hvr-grow">GitHub</a>
+            <a href="mailto:chris.buttaro@gmail.com" class="hvr-grow">Email</a>
+        </div>
+    `);
+
+    sidebar.append(toggleButton, aboutMeContent);
+    $('body').prepend(sidebar);
 })
 
 var form = $('<form>');

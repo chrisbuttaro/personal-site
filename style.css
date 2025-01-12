@@ -41,7 +41,7 @@ form {
     top: 50px;
     left: 148px;
     background-image: url('images/h.png');
-    -vendor-animation-duration: 3s;
+    -vendor-animation-duration: 2s;
     animation-delay: .5s;
     -vendor-animation-iteration-count: infinite;
     position: absolute;
@@ -62,7 +62,7 @@ form {
     top: 50px;
     left: 279px;
     background-image: url('images/r.png');
-    -vendor-animation-duration: 3s;
+    -vendor-animation-duration: 2s;
     animation-delay: 1s;
     -vendor-animation-iteration-count: infinite;
     position: absolute;
@@ -83,7 +83,7 @@ form {
     left:383px;
     top: 50px;
     background-image: url('images/i.png');
-    -vendor-animation-duration: 3s;
+    -vendor-animation-duration: 2s;
     animation-delay: 1.5s;
     -vendor-animation-iteration-count: infinite;
     position: absolute;
@@ -103,7 +103,7 @@ form {
     top: 50px;
     left: 425px;
     background-image: url('images/s.png');
-    -vendor-animation-duration: 3s;
+    -vendor-animation-duration: 2s;
     animation-delay: 2s;
     -vendor-animation-iteration-count: infinite;
     position: absolute;
@@ -124,3 +124,63 @@ form {
     margin-right: 500px;
     margin-top: 300px;
 }
+
+.sidebar {
+    position: fixed;
+    right: -220px;  /* Start folded in */
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #f8f9fa;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    animation-delay: 2.5s;
+}
+
+.sidebar {
+    right: 0px; /* Slide in when collapsed class is added */
+}
+
+.collapsed {
+    right: -220px;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 240px;
+    top: 20px;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    animation-delay: 2.5s;
+}
+
+.about-me-content {
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+
