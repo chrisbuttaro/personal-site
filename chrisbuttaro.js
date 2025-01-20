@@ -58,24 +58,29 @@ $(document).ready(function () {
     addButton(iText, "fadeIn", "Independent", "iButton")
     addButton(sText, "fadeIn", "Software Developer", "sButton")
 
-    const sidebar = $('<div id="sidebar">');
-    sidebar.addClass('sidebar collapsed animated fadeIn');
-
     const toggleButton = $('<button id="toggle-btn">')
         .addClass('toggle-btn animated fadeIn')
-        .text('About Me')
+        .html('<strong>About Me</strong>')
         .click(() => {
             var sidebar = document.getElementById('sidebar');
             var button = document.getElementById('toggle-btn');
             sidebar.classList.toggle('collapsed');
-            button.classList.toggle('collapsed');
+            button.classList.toggle('open');
         });
+
+    const sidebar = $('<div id="sidebar">');
+    sidebar.addClass('sidebar collapsed animated fadeIn');
 
     const aboutMeContent = $('<div>');
     aboutMeContent.addClass('about-me-content animated fadeIn');
     aboutMeContent.html(`
         <h2></h2>
-        <img src="your-photo.jpg" alt="Chris Buttaro" class="profile-img">
+
+        <div class="circle-container">
+  <div class="image-wrapper">
+            <img src="images/me.jpg" alt="Chris Buttaro" class="profile-img">
+  </div>
+</div>
         <p>Full Stack Developer with expertise in Java, Spring, and JavaScript.</p>
         <div class="social-links">
             <a href="https://github.com/chrisbuttaro" class="hvr-grow">GitHub</a>

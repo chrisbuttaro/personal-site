@@ -127,7 +127,7 @@ form {
 
 .sidebar {
     position: fixed;
-    right: -440px;  /* Start folded in */
+    right: -480px;  /* Start folded in */
     top: 0;
     width: 500px;
     height: 100vh;
@@ -137,13 +137,13 @@ form {
     transition: right 0.5s ease;  /* Smooth transition */
     animation-delay: 2.5s;
 }
-
 .sidebar {
     right: 0px; /* Slide in when collapsed class is added */
+    background-color: #578bcf;
 }
 
 .collapsed {
-    right: -440px;
+    right: -480px;
 }
 
 .toggle-btn {
@@ -159,29 +159,35 @@ form {
     border-radius: 5px 5px 0px 0px;
     writing-mode: vertical-rl; /* Display text vertically */
     text-orientation: sideways; /* Ensure text is upright */
+    font-family: sans-serif;
     transform: rotate(180deg); /* Fixed 90 degree rotation */
     position: fixed;
     transition: right 0.5s ease;  /* Smooth transition */
-    right: 40px;
+    right: 5px;
     top: 20px;
 }
 .toggle-btn:hover {
     transform: rotate(180deg); /* Ensure the same rotation on hover */
+    -webkit-filter: brightness(140%);
+    filter: brightness(140%);
 }
-
-.toggle-btn.collapsed {
+.toggle-btn.open {
+    transform: rotate(180deg);
     right: 480px; /* Move button when sidebar is collapsed */
 }
 
 .about-me-content {
     text-align: center;
+    background-color: #578bcf;
 }
 
 .profile-img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
 }
 
 .social-links {
