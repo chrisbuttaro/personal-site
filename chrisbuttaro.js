@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    const contentDiv = $('<div>').addClass('content-div');
+
     function addButton(text, fadeDirection, heading, buttonClass) {
         const button = $('<button>');
         button.click(function () {
@@ -7,8 +9,8 @@ $(document).ready(function () {
             content.append(`<p><font size="30"><strong>${heading}</font></p>
                     <p style="text-align: center;">&nbsp;</p>
                     <p><font size="3"><span style="font-weight: 400;">${text}</span></font></p>`);
-            $('div').empty();
-            $('div').append(content);
+            $('.content-div').empty();
+            $('.content-div').append(content);
 
         })
         button.addClass('hvr-float-shadow');
@@ -18,6 +20,7 @@ $(document).ready(function () {
         });
         $('body').append(button);
     }
+    $('body').append(contentDiv);
     const cText = "I am a collaborative developer who enjoys working with teammates to deliver " +
         "comprehensive solutions. I enjoy sharing my technical insight with product managers and business" +
         " analysts to plan, prioritize, and refine user stories that align with business goals. I work " +
@@ -55,20 +58,17 @@ $(document).ready(function () {
     addButton(iText, "fadeIn", "Independent", "iButton")
     addButton(sText, "fadeIn", "Software Developer", "sButton")
 
-    const sidebar = $('<div>');
+    const sidebar = $('<div id="sidebar">');
     sidebar.addClass('sidebar collapsed animated fadeIn');
 
-    const toggleButton = $('<button>')
-        .addClass('toggle-btn hvr-grow animated fadeIn')
-        .text('<')
+    const toggleButton = $('<button id="toggle-btn">')
+        .addClass('toggle-btn animated fadeIn')
+        .text('About Me')
         .click(() => {
-            if(sidebar.hasClass('collapsed')) {
-                sidebar.removeClass('collapsed');
-                toggleButton.text('>');
-            } else {
-                sidebar.addClass('collapsed');
-                toggleButton.text('<');
-            }
+            var sidebar = document.getElementById('sidebar');
+            var button = document.getElementById('toggle-btn');
+            sidebar.classList.toggle('collapsed');
+            button.classList.toggle('collapsed');
         });
 
     const aboutMeContent = $('<div>');

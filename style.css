@@ -127,14 +127,14 @@ form {
 
 .sidebar {
     position: fixed;
-    right: -220px;  /* Start folded in */
+    right: -440px;  /* Start folded in */
     top: 0;
-    width: 250px;
+    width: 500px;
     height: 100vh;
     background: #f8f9fa;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    transition: left 0.3s ease;
+    transition: right 0.5s ease;  /* Smooth transition */
     animation-delay: 2.5s;
 }
 
@@ -143,18 +143,34 @@ form {
 }
 
 .collapsed {
-    right: -220px;
+    right: -440px;
 }
 
 .toggle-btn {
-    position: absolute;
-    right: 240px;
+    padding: 0px;
+    text-align: center;
+    margin: 0px;
+    width: 40px;
+    height: 160px;
+    background: #4682B4;
+    color: white;
+    z-index: 15;
+    border: none; /* Remove the border */
+    border-radius: 5px 5px 0px 0px;
+    writing-mode: vertical-rl; /* Display text vertically */
+    text-orientation: sideways; /* Ensure text is upright */
+    transform: rotate(180deg); /* Fixed 90 degree rotation */
+    position: fixed;
+    transition: right 0.5s ease;  /* Smooth transition */
+    right: 40px;
     top: 20px;
-    padding: 10px;
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    animation-delay: 2.5s;
+}
+.toggle-btn:hover {
+    transform: rotate(180deg); /* Ensure the same rotation on hover */
+}
+
+.toggle-btn.collapsed {
+    right: 480px; /* Move button when sidebar is collapsed */
 }
 
 .about-me-content {
