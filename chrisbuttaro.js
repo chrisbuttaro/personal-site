@@ -18,6 +18,7 @@ $(document).ready(function () {
         }
     });
 
+    const buttonContainer = $('<div>').addClass('button-container');
     const contentDiv = $('<div>').addClass('content-div');
 
     function addButton(text, fadeDirection, heading, buttonClass) {
@@ -37,8 +38,10 @@ $(document).ready(function () {
         button.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
             button.removeClass(`animated ${fadeDirection}`);
         });
-        $('body').append(button);
+        buttonContainer.append(button)
     }
+
+    $('body').append(buttonContainer);
 
     $('body').append(contentDiv);
     const cText = "I am a collaborative developer who enjoys working with teammates to deliver " +

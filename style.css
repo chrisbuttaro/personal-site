@@ -15,105 +15,74 @@ form {
     left: 10%;
     target-new: tab;
 }
-.cButton {
+
+/* Adjust the button container spacing */
+.button-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;  /* Align buttons vertically */
+    width: auto;
+    margin: 0 auto;
+    gap: 0;  /* Remove any extra gap */
+    padding:30px;
+}
+
+/* Adjust the button size directly */
+.cButton, .hButton, .rButton, .sButton {
     border: none;
     background-color: Transparent;
-    margin: 0;
-    width: 98px;
-    height: 142px;
-    top: 50px;
-    left: 70px;
-    background-image: url('images/c.png');
-    position: absolute;
-}
-.cButton:focus {
-    outline: 0;
-}
-.cButton:hover {
-    -webkit-filter: brightness(140%);
-}
-.hButton {
-    border: none;
-    background-color: Transparent;
-    margin: 0;
-    width: 150px;
-    height: 143px;
-    top: 50px;
-    left: 148px;
-    background-image: url('images/h.png');
-    -vendor-animation-duration: 2s;
-    animation-delay: .5s;
-    -vendor-animation-iteration-count: infinite;
-    position: absolute;
+    margin: 0;  /* Zero margin to remove spacing between buttons */
+    padding: 0; /* Remove any internal padding */
+    width: 70px;  /* Set width */
+    height: 100px;  /* Set height */
     background-repeat: no-repeat;
+    background-size: contain;  /* Ensure image fits button size */
+    background-position: center;  /* Ensure background image is centered */
+    transition: transform 0.3s ease-in-out;
+    display: block;  /* Make sure buttons are treated as block elements */
+    object-fit: cover;  /* Ensure images fit perfectly in button space */
+    object-position: center;  /* Center image inside the button */
 }
-.hButton:focus {
-    outline: 0;
-}
-.hButton:hover {
-    -webkit-filter: brightness(140%);
-}
-.rButton {
-    border: none;
-    background-color: Transparent;
-    margin: 0;
-    width: 96px;
-    height: 149px;
-    top: 50px;
-    left: 279px;
-    background-image: url('images/r.png');
-    -vendor-animation-duration: 2s;
-    animation-delay: 1s;
-    -vendor-animation-iteration-count: infinite;
-    position: absolute;
-    background-repeat: no-repeat;
-}
-.rButton:focus {
-    outline: 0;
-}
-.rButton:hover {
-    -webkit-filter: brightness(140%);
-}
+
 .iButton {
     border: none;
     background-color: Transparent;
-    margin: 0;
-    width: 36px;
-    height: 142px;
-    left:383px;
-    top: 50px;
+    margin: 0;  /* Zero margin to remove spacing between buttons */
+    padding: 0; /* Remove any internal padding */
+    width: 35px;  /* Set width */
+    height: 100px;  /* Set height */
+    background-repeat: no-repeat;
+    background-size: contain;  /* Ensure image fits button size */
+    background-position: center;  /* Ensure background image is centered */
+    transition: transform 0.3s ease-in-out;
+    display: block;  /* Make sure buttons are treated as block elements */
+    object-fit: cover;  /* Ensure images fit perfectly in button space */
+    object-position: center;  /* Center image inside the button */
+}
+
+.cButton {
+    background-image: url('images/c.png');
+}
+
+.hButton {
+    background-image: url('images/h.png');
+}
+
+.rButton {
+    background-image: url('images/r.png');
+}
+
+.iButton {
     background-image: url('images/i.png');
-    -vendor-animation-duration: 2s;
-    animation-delay: 1.5s;
-    -vendor-animation-iteration-count: infinite;
-    position: absolute;
 }
-.iButton:focus {
-    outline: 0;
-}
-.iButton:hover {
-    -webkit-filter: brightness(140%);
-}
+
 .sButton {
-    border: none;
-    background-color: Transparent;
-    margin: 0;
-    width: 101px;
-    height: 145px;
-    top: 50px;
-    left: 425px;
     background-image: url('images/s.png');
-    -vendor-animation-duration: 2s;
-    animation-delay: 2s;
-    -vendor-animation-iteration-count: infinite;
-    position: absolute;
 }
-.sButton:focus {
-    outline: 0;
-}
-.sButton:hover {
-    -webkit-filter: brightness(140%);
-}
+
+/*.cButton:hover, .hButton:hover, .rButton:hover, .iButton:hover, .sButton:hover {*/
+/*    -webkit-filter: brightness(140%);*/
+/*}*/
 
 .resume {
     margin-top: 250px;
@@ -197,7 +166,7 @@ form {
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    object-fit: cover;
 }
 
 .social-links {
