@@ -1,4 +1,23 @@
 $(document).ready(function () {
+
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 200 }, // Number of dots
+            color: { value: "#ffffff" }, // Dot color
+            shape: { type: "circle" }, // Shape of dots
+            size: { value: 3 }, // Smaller dots
+            opacity: { value: 0.8 }, // Slightly transparent
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.5,
+                width: 2 // Thicker lines
+            },
+            move: { enable: true, speed: 2 }
+        }
+    });
+
     const contentDiv = $('<div>').addClass('content-div');
 
     function addButton(text, fadeDirection, heading, buttonClass) {
@@ -20,6 +39,7 @@ $(document).ready(function () {
         });
         $('body').append(button);
     }
+
     $('body').append(contentDiv);
     const cText = "I am a collaborative developer who enjoys working with teammates to deliver " +
         "comprehensive solutions. I enjoy sharing my technical insight with product managers and business" +

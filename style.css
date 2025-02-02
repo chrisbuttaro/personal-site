@@ -136,10 +136,12 @@ form {
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     transition: right 0.5s ease;  /* Smooth transition */
     animation-delay: 2.5s;
+    z-index: 1000;
 }
 .sidebar {
     right: 0px; /* Slide in when collapsed class is added */
     background-color: #578bcf;
+    z-index: 1000;
 }
 
 .collapsed {
@@ -154,7 +156,6 @@ form {
     height: 160px;
     background: #4682B4;
     color: white;
-    z-index: 15;
     border: none; /* Remove the border */
     border-radius: 5px 5px 0px 0px;
     writing-mode: vertical-rl; /* Display text vertically */
@@ -165,6 +166,7 @@ form {
     transition: right 0.5s ease;  /* Smooth transition */
     right: 5px;
     top: 20px;
+    z-index: 1000;
 }
 .toggle-btn:hover {
     transform: rotate(180deg); /* Ensure the same rotation on hover */
@@ -179,6 +181,14 @@ form {
 .about-me-content {
     text-align: center;
     background-color: #578bcf;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 .profile-img {
