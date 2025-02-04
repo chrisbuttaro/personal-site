@@ -26,8 +26,8 @@ $(document).ready(function () {
         button.click(function () {
             const content = $('<p>');
             content.addClass('textMargin animated fadeIn');
-            content.append(`<p><font size="30"><strong>${heading}</font></p>
-                    <p style="text-align: center;">&nbsp;</p>
+            content.append(`<p><strong class="heading">${heading}</strong></p>
+                    <br>
                     <p><font size="3"><span style="font-weight: 400;">${text}</span></font></p>`);
             $('.content-div').empty();
             $('.content-div').append(content);
