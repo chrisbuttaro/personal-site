@@ -104,7 +104,9 @@ $(document).ready(function () {
             <img src="images/me.jpg" alt="Chris Buttaro" class="profile-img">
   </div>
 </div>
-        <p>Full Stack Developer with expertise in Java, Spring, and JavaScript.</p>
+        <p>I enjoy hiking and have lived in some great places for it, including the U.S. Virgin Islands, Colorado, and Oregon. 
+
+Professionally, my career path has been unique. I served as a soldier in South Korea, Panama, Haiti, and New Orleans in the aftermath of Hurricane Katrina. I also spent five years employed as military IT contractor in Iraq, Afghanistan, and Qatar. Finally, as a software engineer I’ve worked on several highly technical projects in the fields of GPS technology, high performance computing, and healthcare.</p>
         <div class="social-links">
             <a href="https://github.com/chrisbuttaro" class="hvr-grow">GitHub</a>
             <a href="mailto:chris.buttaro@gmail.com" class="hvr-grow">Email</a>
