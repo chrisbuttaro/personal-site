@@ -95,10 +95,10 @@ form {
 .sidebar {
     position: fixed;
     right: -480px;  /* Start folded in */
+    background-color: rgba(0, 0, 0, 0.8);
     top: 0;
     width: 500px;
     height: 100vh;
-    background: #f8f9fa;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     transition: right 0.5s ease;  /* Smooth transition */
@@ -107,12 +107,28 @@ form {
 }
 .sidebar {
     right: 0px; /* Slide in when collapsed class is added */
-    background-color: #578bcf;
-    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+    /*z-index: 1000;*/
 }
 
 .collapsed {
     right: -480px;
+}
+
+/*.Collaborative {*/
+/*    --animate-duration:5s;*/
+/*}*/
+
+
+
+
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index:0;
 }
 
 .toggle-btn {
@@ -146,16 +162,9 @@ form {
 }
 
 .about-me-content {
+    color:white;
     text-align: center;
-    background-color: #578bcf;
-}
-
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    /*z-index: 1000;*/
 }
 
 .profile-img {

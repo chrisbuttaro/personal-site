@@ -2,11 +2,11 @@ $(document).ready(function () {
 
     particlesJS("particles-js", {
         particles: {
-            number: { value: 200 }, // Number of dots
-            color: { value: "#ffffff" }, // Dot color
-            shape: { type: "circle" }, // Shape of dots
-            size: { value: 3 }, // Smaller dots
-            opacity: { value: 0.8 }, // Slightly transparent
+            number: {value: 200}, // Number of dots
+            color: {value: "#ffffff"}, // Dot color
+            shape: {type: "circle"}, // Shape of dots
+            size: {value: 3}, // Smaller dots
+            opacity: {value: 0.8}, // Slightly transparent
             line_linked: {
                 enable: true,
                 distance: 150,
@@ -33,8 +33,7 @@ $(document).ready(function () {
             $('.content-div').append(content);
 
         })
-        button.addClass('hvr-float-shadow');
-        button.addClass(`${buttonClass} animated ${fadeDirection}`);
+        button.addClass(`${buttonClass} animated hvr-float-shadow`);
         button.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
             button.removeClass(`animated ${fadeDirection}`);
         });
@@ -97,16 +96,20 @@ $(document).ready(function () {
     const aboutMeContent = $('<div>');
     aboutMeContent.addClass('about-me-content animated fadeIn');
     aboutMeContent.html(`
-        <h2></h2>
-
         <div class="circle-container">
-  <div class="image-wrapper">
-            <img src="images/me.jpg" alt="Chris Buttaro" class="profile-img">
-  </div>
-</div>
-        <p>I enjoy hiking and have lived in some great places for it, including the U.S. Virgin Islands, Colorado, and Oregon. 
-
-Professionally, my career path has been unique. I served as a soldier in South Korea, Panama, Haiti, and New Orleans in the aftermath of Hurricane Katrina. I also spent five years employed as military IT contractor in Iraq, Afghanistan, and Qatar. Finally, as a software engineer I’ve worked on several highly technical projects in the fields of GPS technology, high performance computing, and healthcare.</p>
+            <div class="image-wrapper">
+                <img src="images/me.jpg" alt="Chris Buttaro" class="profile-img">
+            </div>
+        </div>
+        <br>
+        <p>I like hiking and have lived in some great places for it, including the U.S. Virgin Islands, Colorado, and
+        Oregon.
+        <br>
+        <br>
+        Professionally, my career path has been unique. I served as a soldier in South Korea, Panama, Haiti, and New
+        Orleans in the aftermath of Hurricane Katrina. I also spent five years employed as military IT contractor in
+        Iraq, Afghanistan, and Qatar. Finally, as a software engineer I’ve worked on several highly technical projects
+        in the fields of GPS technology, high performance computing, and healthcare.</p>
         <div class="social-links">
             <a href="https://github.com/chrisbuttaro" class="hvr-grow">GitHub</a>
             <a href="mailto:chris.buttaro@gmail.com" class="hvr-grow">Email</a>
