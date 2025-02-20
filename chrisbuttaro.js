@@ -100,7 +100,7 @@ $(document).ready(function () {
 
 
     const toggleButton = $('<button id="toggle-btn">')
-        .addClass('toggle-btn animated fadeIn')
+        .addClass('toggle-btn animated fadeIn shimmerButton')
         .html('<strong>About Me</strong>')
         .click(() => {
             var sidebar = document.getElementById('sidebar');
