@@ -19,28 +19,39 @@ $(document).ready(function () {
     });
 
     const buttonContainer = $('<div>').addClass('button-container');
+    $('body').append(buttonContainer)
     const contentDiv = $('<div>').addClass('content-div');
 
-    function addButton(text, fadeDirection, heading, buttonClass) {
-        const button = $('<button>');
-        button.click(function () {
-            const content = $('<p>');
-            content.addClass('textMargin animated fadeIn');
-            content.append(`<p><strong class="heading">${heading}</strong></p>
-                    <br>
-                    <p><font size="3"><span style="font-weight: 400;">${text}</span></font></p>`);
-            $('.content-div').empty();
-            $('.content-div').append(content);
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
 
+     function addButton(text, fadeDirection, heading, buttonClass) {
+        const button = $('<button>');
+        button.click(function() {
+            handleClick(heading, text)
         })
-        button.addClass(`${buttonClass} animated hvr-float-shadow`);
+         button.mouseover(function() {
+             handleClick(heading, text)
+         })
+       // button.mouseover(handleClick(heading, text))
+        button.addClass(`${buttonClass} animated fadeIn hvr-float-shadow`);
         button.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-            button.removeClass(`animated ${fadeDirection}`);
+            button.removeClass(`fadeIn`);
         });
+
         buttonContainer.append(button)
     }
 
-    $('body').append(buttonContainer);
+    function handleClick(heading,text) {
+        const content = $('<p>');
+        content.addClass('textMargin animated fadeIn');
+        content.append(`<p><strong class="heading">${heading}</strong></p>
+                    <br>
+                    <p><font size="3"><span style="font-weight: 400;">${text}</span></font></p>`);
+        $('.content-div').empty();
+        $('.content-div').append(content);
+    }
 
     $('body').append(contentDiv);
     const cText = "I am a collaborative developer who enjoys working with teammates to deliver " +
@@ -74,11 +85,19 @@ $(document).ready(function () {
         "clear communication, proactive problem-solving, and thoughtful planning to ensure smooth and " +
         "predictable project outcomes. It’s important to me that my consistent performance fosters trust and contributes to a strong, dependable team dynamic."
 
-    addButton(cText, "fadeIn", "Collaborative", "cButton")
-    addButton(hText, "fadeIn", "Hard-working", "hButton")
-    addButton(rText, "fadeIn", "Reliable", "rButton")
-    addButton(iText, "fadeIn", "Independent", "iButton")
-    addButton(sText, "fadeIn", "Software Developer", "sButton")
+    async function haveButtonsAppearSequentially(ms) {
+        addButton(cText, "fadeIn", "Collaborative", "cButton")
+        await sleep(ms);
+        addButton(hText, "fadeIn", "Hard-working", "hButton")
+        await sleep(ms);
+        addButton(rText, "fadeIn", "Reliable", "rButton")
+        await sleep(ms);
+        addButton(iText, "fadeIn", "Independent", "iButton")
+        await sleep(ms);
+        addButton(sText, "fadeIn", "Software Developer", "sButton")
+    }
+    haveButtonsAppearSequentially(500)
+
 
     const toggleButton = $('<button id="toggle-btn">')
         .addClass('toggle-btn animated fadeIn')
