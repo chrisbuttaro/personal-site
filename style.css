@@ -15,13 +15,11 @@ form {
     left: 10%;
     target-new: tab;
 }
-
 .textMargin {
     margin-left: 100px;
     margin-right: 700px;
     margin-top: 50px;
 }
-
 .button-container {
     display: flex;
     justify-content: left;
@@ -31,9 +29,8 @@ form {
     margin-top:100px;
     margin-left:100px;
     margin-bottom:100px;
+    z-index: 1000;
 }
-
-/* Adjust the button size directly */
 .cButton, .hButton, .rButton, .sButton {
     border: none;
     background-color: Transparent;
@@ -48,8 +45,8 @@ form {
     display: block;  /* Make sure buttons are treated as block elements */
     object-fit: cover;  /* Ensure images fit perfectly in button space */
     object-position: center;  /* Center image inside the button */
+    z-index: 1000;
 }
-
 .iButton {
     border: none;
     background-color: Transparent;
@@ -64,8 +61,8 @@ form {
     display: block;  /* Make sure buttons are treated as block elements */
     object-fit: cover;  /* Ensure images fit perfectly in button space */
     object-position: center;  /* Center image inside the button */
+    z-index: 1000;
 }
-
 .cButton {
     background-image: url('images/c.png');
 }
@@ -85,13 +82,13 @@ form {
 .sButton {
     background-image: url('images/s.png');
 }
-
+.content-div {
+    z-index: 1000;
+}
 .resume {
     margin-top: 250px;
     padding: 120px;
 }
-
-
 .sidebar {
     position: fixed;
     right: -480px;  /* Start folded in */
@@ -110,15 +107,13 @@ form {
     background: rgba(0, 0, 0, 0.8);
     /*z-index: 1000;*/
 }
-
 .collapsed {
     right: -480px;
 }
-
 .shimmerButton {
     background: linear-gradient(90deg, #007bff, #0056b3);
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -126,7 +121,6 @@ form {
     overflow: hidden;
     border-radius: 5px;
 }
-
 .shimmerButton::before {
     content: "";
     position: absolute;
@@ -138,25 +132,12 @@ form {
     transform: skewX(-20deg);
     animation: shimmer 2s infinite linear;
 }
-
 @keyframes shimmer {
     0% { left: -150%; }
     100% { left: 150%; }
 }
-
-
-
-
-#particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index:0;
-}
-
 .toggle-btn {
+    font-size: 16px;
     padding: 0px;
     text-align: center;
     margin: 0px;
@@ -185,13 +166,11 @@ form {
     transform: rotate(180deg);
     right: 480px; /* Move button when sidebar is collapsed */
 }
-
 .about-me-content {
     color:white;
     text-align: center;
     /*z-index: 1000;*/
 }
-
 .profile-img {
     width: 150px;
     height: 150px;
@@ -204,7 +183,6 @@ form {
 .social-links {
     margin-top: 20px;
 }
-
 .social-links a {
     display: block;
     margin: 10px 0;
@@ -214,10 +192,29 @@ form {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-
 .heading {
     font-size: 30px;
 }
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index:0;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Transparent gray */
+    display: none;
+    z-index: 3;
+}
+
 
 
 

@@ -44,7 +44,7 @@ $(document).ready(function () {
     }
 
     function handleClick(heading,text) {
-        const content = $('<p>');
+        const content = $('<p id="text">');
         content.addClass('textMargin animated fadeIn');
         content.append(`<p><strong class="heading">${heading}</strong></p>
                     <br>
@@ -98,7 +98,7 @@ $(document).ready(function () {
     }
     haveButtonsAppearSequentially(500)
 
-
+    const overlay = $('<div id="overlay" class ="animated fadeIn">')
     const toggleButton = $('<button id="toggle-btn">')
         .addClass('toggle-btn animated fadeIn shimmerButton')
         .html('<strong>About Me</strong>')
@@ -107,6 +107,24 @@ $(document).ready(function () {
             var button = document.getElementById('toggle-btn');
             sidebar.classList.toggle('collapsed');
             button.classList.toggle('open');
+            button.classList.toggle('shimmerButton')
+            if (button.classList.contains('shimmerButton')) {
+                $('body').append(buttonContainer)
+                $('body').append(contentDiv);
+                haveButtonsAppearSequentially(500)
+
+            } else {
+                $("#text").remove()
+                $(".content-div").remove()
+                $(".cButton").remove()
+                $(".hButton").remove()
+                $(".rButton").remove()
+                $(".iButton").remove()
+                $(".sButton").remove()
+                $(".button-container" ).remove()
+
+            }
+           // $("#overlay").fadeIn();
         });
 
     const sidebar = $('<div id="sidebar">');
