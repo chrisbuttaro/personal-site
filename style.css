@@ -29,7 +29,7 @@ form {
     margin-top:100px;
     margin-left:100px;
     margin-bottom:100px;
-    z-index: 1000;
+    z-index: 1;
 }
 .cButton, .hButton, .rButton, .sButton {
     border: none;
@@ -45,7 +45,7 @@ form {
     display: block;  /* Make sure buttons are treated as block elements */
     object-fit: cover;  /* Ensure images fit perfectly in button space */
     object-position: center;  /* Center image inside the button */
-    z-index: 1000;
+    /*z-index: 1000;*/
 }
 .iButton {
     border: none;
@@ -61,7 +61,7 @@ form {
     display: block;  /* Make sure buttons are treated as block elements */
     object-fit: cover;  /* Ensure images fit perfectly in button space */
     object-position: center;  /* Center image inside the button */
-    z-index: 1000;
+    /*z-index: 1000;*/
 }
 .cButton {
     background-image: url('images/c.png');
@@ -83,7 +83,7 @@ form {
     background-image: url('images/s.png');
 }
 .content-div {
-    z-index: 1000;
+    /*z-index: 1000;*/
 }
 .resume {
     margin-top: 250px;
@@ -100,7 +100,7 @@ form {
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     transition: right 0.5s ease;  /* Smooth transition */
     animation-delay: 2.5s;
-    z-index: 1000;
+    z-index: 1;
 }
 .sidebar {
     right: 0px; /* Slide in when collapsed class is added */
@@ -155,7 +155,7 @@ form {
     transition: right 0.5s ease;  /* Smooth transition */
     right: 5px;
     top: 20px;
-    z-index: 1000;
+    z-index: 1;
 }
 .toggle-btn:hover {
     transform: rotate(180deg); /* Ensure the same rotation on hover */
@@ -169,7 +169,6 @@ form {
 .about-me-content {
     color:white;
     text-align: center;
-    /*z-index: 1000;*/
 }
 .profile-img {
     width: 150px;
@@ -201,18 +200,7 @@ form {
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index:0;
-}
-
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Transparent gray */
-    display: none;
-    z-index: 3;
+    /*z-index:10;*/
 }
 
 

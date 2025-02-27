@@ -1,22 +1,9 @@
-$(document).ready(function () {
 
-    particlesJS("particles-js", {
-        particles: {
-            number: {value: 200}, // Number of dots
-            color: {value: "#ffffff"}, // Dot color
-            shape: {type: "circle"}, // Shape of dots
-            size: {value: 3}, // Smaller dots
-            opacity: {value: 0.8}, // Slightly transparent
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: "#ffffff",
-                opacity: 0.5,
-                width: 2 // Thicker lines
-            },
-            move: { enable: true, speed: 2 }
-        }
-    });
+
+
+
+$(document).ready(function () {
+    loadParticles()
 
     const buttonContainer = $('<div>').addClass('button-container');
     $('body').append(buttonContainer)
@@ -98,17 +85,18 @@ $(document).ready(function () {
     }
     haveButtonsAppearSequentially(500)
 
-    const overlay = $('<div id="overlay" class ="animated fadeIn">')
     const toggleButton = $('<button id="toggle-btn">')
         .addClass('toggle-btn animated fadeIn shimmerButton')
         .html('<strong>About Me</strong>')
         .click(() => {
+            document.body.style.backgroundImage = "none";
             var sidebar = document.getElementById('sidebar');
             var button = document.getElementById('toggle-btn');
             sidebar.classList.toggle('collapsed');
             button.classList.toggle('open');
             button.classList.toggle('shimmerButton')
             if (button.classList.contains('shimmerButton')) {
+                changeParticleColor('#ffffff')
                 $('body').append(buttonContainer)
                 $('body').append(contentDiv);
                 haveButtonsAppearSequentially(500)
@@ -122,7 +110,7 @@ $(document).ready(function () {
                 $(".iButton").remove()
                 $(".sButton").remove()
                 $(".button-container" ).remove()
-
+                changeParticleColor('#0b0a0a')
             }
            // $("#overlay").fadeIn();
         });
@@ -156,6 +144,32 @@ $(document).ready(function () {
     sidebar.append(toggleButton, aboutMeContent);
     $('body').prepend(sidebar);
 })
+
+function loadParticles() {
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 200 }, // Number of particles
+            color: { value: "#ffffff" }, // Particle color (dynamic)
+            shape: { type: "circle" }, // Shape of particles
+            size: { value: 3 }, // Particle size
+            opacity: { value: 0.8 }, // Transparency of particles
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff", // Line color (dynamic)
+                opacity: 0.5,
+                width: 2 // Line width
+            },
+            move: { enable: true, speed: 2 } // Particle movement speed
+        }
+    });
+}
+
+function changeParticleColor(color) {
+    pJSDom[0].pJS.particles.color.value = color;
+    pJSDom[0].pJS.particles.line_linked.color = color;
+    pJSDom[0].pJS.fn.particlesRefresh();
+}
 
 var form = $('<form>');
 form.attr('method', 'GET');
