@@ -9,12 +9,12 @@ body {
     background-attachment: fixed;
     min-width: 900px;
 }
-form {
-    position: absolute;
-    bottom: 43%;
-    left: 10%;
-    target-new: tab;
-}
+/*form {*/
+/*    position: absolute;*/
+/*    bottom: 43%;*/
+/*    left: 10%;*/
+/*    target-new: tab;*/
+/*}*/
 .textMargin {
     margin-left: 100px;
     margin-right: 700px;
@@ -92,7 +92,7 @@ form {
 .sidebar {
     position: fixed;
     right: -480px;  /* Start folded in */
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: gray;
     top: 0;
     width: 500px;
     height: 100vh;
@@ -104,7 +104,7 @@ form {
 }
 .sidebar {
     right: 0px; /* Slide in when collapsed class is added */
-    background: rgba(0, 0, 0, 0.8);
+    background-color: gray;
     /*z-index: 1000;*/
 }
 .collapsed {
@@ -200,9 +200,66 @@ form {
     left: 0;
     width: 100vw;
     height: 100vh;
-    /*z-index:10;*/
 }
 
+/* contact form */
+/* Ensure the form appears in normal document flow */
+.contact-section {
+    background-color: #333; /* Dark gray background */
+    color: white;
+    padding: 50px 20px; /* Adjust padding to suit your layout */
+    margin-top: 50px;  /* Create space above the form */
+    border-radius: 8px;
+    width: 100%;  /* Full width of the container */
+    box-sizing: border-box;  /* Prevent padding from affecting width */
+}
+
+.contact-form-container {
+    max-width: 600px;
+    padding: 30px;
+    background-color: #444; /* Slightly lighter gray background for the form */
+    border-radius: 8px;
+    margin: 0 auto; /* Center the form horizontally */
+    width: 100%;  /* Make it responsive */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Make sure form elements follow the document flow and use margin for spacing */
+.form-control {
+    background-color: #555; /* Dark gray input fields */
+    color: white;
+    border: 1px solid #777;
+    margin-bottom: 15px; /* Add space between inputs */
+}
+
+.form-control:focus {
+    border-color: #007bff; /* Blue border when focused */
+    background-color: #444;
+    color: white;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Footer (optiona
 
 
 

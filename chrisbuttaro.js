@@ -134,11 +134,41 @@ $(document).ready(function () {
         Professionally, my career path has been unique. I served as a soldier in South Korea, Panama, Haiti, and New
         Orleans in the aftermath of Hurricane Katrina. I also spent five years employed as military IT contractor in
         Iraq, Afghanistan, and Qatar. Finally, as a software engineer I’ve worked on several highly technical projects
-        in the fields of GPS technology, high performance computing, and healthcare.</p>
-        <div class="social-links">
-            <a href="https://github.com/chrisbuttaro" class="hvr-grow">GitHub</a>
-            <a href="mailto:chris.buttaro@gmail.com" class="hvr-grow">Email</a>
-        </div>
+        in the fields of GPS technology, high performance computing, and healthcare.
+        </p>
+       <form id="contact-form" action="mail.php" method="POST">
+          <h3>Contact
+           Me</h3>
+        
+          <!-- Name input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="text" id="name" name="name" class="form-control" />
+            <label class="form-label" for="name">Name</label>
+          </div>
+        
+          <!-- Email input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="email" id="email" name="email" class="form-control" />
+            <label class="form-label" for="email">Email address</label>
+          </div>
+        
+          <!-- Subject input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <input type="text" id="subject" name="subject" class="form-control" />
+            <label class="form-label" for="subject">Subject</label>
+          </div>
+        
+          <!-- Message input -->
+          <div data-mdb-input-init class="form-outline mb-4">
+            <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+            <label class="form-label" for="message">Message</label>
+          </div>
+        
+          <!-- Submit button -->
+          <button data-mdb-button-init id="submit-form" type="submit" data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+            Send
+          </button>
+    </form>
     `);
 
     sidebar.append(toggleButton, aboutMeContent);
