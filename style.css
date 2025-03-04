@@ -1,5 +1,5 @@
 body {
-    background-image: url('back.jpeg');
+    background-image: url('background.jpeg');
     no-repeat: center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -9,16 +9,20 @@ body {
     background-attachment: fixed;
     min-width: 900px;
 }
-/*form {*/
-/*    position: absolute;*/
-/*    bottom: 43%;*/
-/*    left: 10%;*/
-/*    target-new: tab;*/
-/*}*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1;
+}
 .textMargin {
     margin-left: 100px;
     margin-right: 700px;
     margin-top: 50px;
+    z-index: 3;
 }
 .button-container {
     display: flex;
@@ -29,7 +33,7 @@ body {
     margin-top:100px;
     margin-left:100px;
     margin-bottom:100px;
-    z-index: 1;
+    z-index: 2;
 }
 .cButton, .hButton, .rButton, .sButton {
     border: none;
@@ -45,7 +49,7 @@ body {
     display: block;  /* Make sure buttons are treated as block elements */
     object-fit: cover;  /* Ensure images fit perfectly in button space */
     object-position: center;  /* Center image inside the button */
-    /*z-index: 1000;*/
+    z-index: 2;
 }
 .iButton {
     border: none;
@@ -61,7 +65,7 @@ body {
     display: block;  /* Make sure buttons are treated as block elements */
     object-fit: cover;  /* Ensure images fit perfectly in button space */
     object-position: center;  /* Center image inside the button */
-    /*z-index: 1000;*/
+    z-index: 2;
 }
 .cButton {
     background-image: url('images/c.png');
@@ -83,12 +87,12 @@ body {
     background-image: url('images/s.png');
 }
 .content-div {
-    /*z-index: 1000;*/
+    z-index: 3;
 }
-.resume {
-    margin-top: 250px;
-    padding: 120px;
-}
+/*.resume {*/
+/*    margin-top: 250px;*/
+/*    padding: 120px;*/
+/*}*/
 .sidebar {
     position: fixed;
     right: -480px;  /* Start folded in */
@@ -100,15 +104,16 @@ body {
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     transition: right 0.5s ease;  /* Smooth transition */
     animation-delay: 2.5s;
-    z-index: 1;
+    z-index: 3;
 }
 .sidebar {
     right: 0px; /* Slide in when collapsed class is added */
     background-color: gray;
-    /*z-index: 1000;*/
+    z-index: 3;
 }
 .collapsed {
     right: -480px;
+    z-index: 3;
 }
 .shimmerButton {
     background: linear-gradient(90deg, #007bff, #0056b3);
@@ -120,6 +125,7 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 5px;
+    z-index: 3;
 }
 .shimmerButton::before {
     content: "";
@@ -131,6 +137,7 @@ body {
     background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
     transform: skewX(-20deg);
     animation: shimmer 2s infinite linear;
+    z-index: 3;
 }
 @keyframes shimmer {
     0% { left: -150%; }
@@ -155,7 +162,7 @@ body {
     transition: right 0.5s ease;  /* Smooth transition */
     right: 5px;
     top: 20px;
-    z-index: 1;
+    z-index: 3;
 }
 .toggle-btn:hover {
     transform: rotate(180deg); /* Ensure the same rotation on hover */
@@ -165,6 +172,7 @@ body {
 .toggle-btn.open {
     transform: rotate(180deg);
     right: 480px; /* Move button when sidebar is collapsed */
+    z-index: 3;
 }
 .about-me-content {
     color:white;
@@ -200,6 +208,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 2;
 }
 
 /* contact form */

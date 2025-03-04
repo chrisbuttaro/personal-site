@@ -85,22 +85,22 @@ $(document).ready(function () {
     }
     haveButtonsAppearSequentially(500)
 
+    const overlay = $('<div id="overlay" class="overlay">')
     const toggleButton = $('<button id="toggle-btn">')
         .addClass('toggle-btn animated fadeIn shimmerButton')
         .html('<strong>About Me</strong>')
         .click(() => {
-            document.body.style.backgroundImage = "none";
             var sidebar = document.getElementById('sidebar');
             var button = document.getElementById('toggle-btn');
             sidebar.classList.toggle('collapsed');
             button.classList.toggle('open');
             button.classList.toggle('shimmerButton')
             if (button.classList.contains('shimmerButton')) {
+                $("#overlay").remove()
                 changeParticleColor('#ffffff')
                 $('body').append(buttonContainer)
                 $('body').append(contentDiv);
                 haveButtonsAppearSequentially(500)
-
             } else {
                 $("#text").remove()
                 $(".content-div").remove()
@@ -110,9 +110,10 @@ $(document).ready(function () {
                 $(".iButton").remove()
                 $(".sButton").remove()
                 $(".button-container" ).remove()
+                $('body').append(overlay)
                 changeParticleColor('#0b0a0a')
+                $("#particles-js").style.zIndex = 3000
             }
-           // $("#overlay").fadeIn();
         });
 
     const sidebar = $('<div id="sidebar">');
